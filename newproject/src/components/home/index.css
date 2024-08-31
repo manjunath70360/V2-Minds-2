@@ -1,0 +1,217 @@
+
+@media (min-width:700px){
+    body{
+        padding: 20px 250px;
+    }
+}
+.app-container{
+    background-color: rgb(206, 236, 255);
+    padding: 12px;
+}
+input{
+    cursor: pointer;
+}
+.home-icon{
+    display: flex;
+    align-items: center;
+}
+.home-btn{
+    display: flex;
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    align-items: center;
+    padding: 0px;
+    border-radius: 15px;
+    padding-left: 5px;
+    outline: none;
+    border: 1px solid rgb(88, 97, 100);
+    margin-right: 10px;
+}
+.home{
+    font-family: roboto;
+    font-size: 14px;
+    font-weight: 500;
+    
+    
+}
+.icon-home{
+   color: rgb(5, 126, 151);
+}
+.path-icon{
+    margin-left: 4px;
+    margin-right: 4px;
+}
+.path-con{
+    display: flex;
+    align-items: center;
+}
+.div-one, .div-two{
+    background-color: white;
+ margin-bottom: 20px;
+    
+}
+
+.folder-header{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+.folder-action-btns{
+    display: flex;
+    align-items: center;
+    border-right: 1px solid gray;
+    padding-right: 12px;
+    padding-left: 12px;
+}
+.last-action{
+    border: none;
+}
+.icon-btn{
+    display: flex;
+    height: 22px;
+    width: 22px;
+    background-color: rgb(5, 126, 151);
+    align-items: center;
+    padding: 0px;
+    border-radius: 15px;
+    padding-left: 5px;
+    margin-right: 6px;
+    outline: none;
+    border: 1px solid rgb(88, 97, 100);
+}
+.icon{
+    color: white;
+}
+.action-name{
+    font-family: roboto;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(5, 126, 151);
+    margin: 8px 0px;
+}
+.file-header{
+    display: flex;
+    align-items: center;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    padding-left: 6px;
+    padding-right: 6px;
+    background-color: rgb(243, 243, 243);
+}
+.check-btn{
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border: 0.6px solid gray;
+    border-radius: 1px;
+    margin-right: 8px;
+}
+.folder-header-name{
+    font-family: roboto;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 4px;
+}
+
+.file{
+    width: 48%;
+}
+.size{
+    width: 17%;
+    
+}
+.size-name{
+    font-size: 12px;
+}
+.date{
+    width: 35%;
+}
+.div-2-header{
+    display: flex;
+    align-items: center;
+ width: 50%;
+}
+.header-div-2{
+    justify-content: space-between;
+
+}
+.empty-message{
+    text-align: center;
+    padding-top: 50px;
+}
+.file-div-2{
+    min-height: 160px;
+}
+.file-con{
+    display: flex;
+    align-items: center;
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-top: 6px;
+    cursor: pointer;
+}
+.color{
+   color: rgb(5, 126, 151);
+   font-size: 14px;
+   font-weight: 540;
+}
+.folder-btn{
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+}
+.icon-folder{
+    background-color: rgb(5, 126, 151);
+    color: white;
+    padding: 1px;
+}
+.icon-folder-sub{
+    background-color: rgb(213, 107, 119);
+    color: white;
+    padding: 1px;
+}
+.folder-header-two{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.header-name{
+    font-family: roboto;
+    font-size: 14px;
+    font-weight: 500;
+}
+.select{
+    height: 20px;
+    margin-left: 2px;
+    border: 1px solid rgb(5, 126, 151);
+    border-radius: 2px;
+    outline: none;
+}
+.select-con{
+    display: flex;
+    align-items: center;
+}
+.last{
+    align-self: flex-end;
+    align-items: center;
+    display: flex;
+}
+.arrow{
+    color: rgb(5, 126, 151);
+}
+.remove-btn{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.delete-icon{
+    margin-right: 4px;
+    font-size: 18px;
+}
