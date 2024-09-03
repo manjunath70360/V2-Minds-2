@@ -18,7 +18,7 @@ const filesAndFolders = [
         date: '2016/04/05 11:56:42 AM',
         subFolder: [
             { id: 'dummyId1', isFolder: false, name: 'dummyFile1.srt', size: '22KB', date: "2016/04/05 11:56:42 AM" },
-            { id: 'dummyId2', isFolder: false, name: 'dummyFile2.srt', size: '40KB', date: "2016/04/05 11:56:42 AM" }
+            { id: 'dummyId2', isFolder: false, name: 'dummyFile2.srt', size: '40KB', date: "2016/04/05 11:56:42 AM" },
         ]
     },
     {
@@ -76,10 +76,28 @@ class Home extends Component {
             const updatedFiles = prevState.files.map(file => 
                 file.id === id ? { ...file, isSubFolderVisible: !file.isSubFolderVisible } : file
             );
+    
+            let currentPath = '';
+            let ispPathVisible = false;
+    
+            // Find the current folder name and construct the path
+            updatedFiles.forEach(file => {
+                if (file.id === id) {
+                    currentPath = file.name;
+                    ispPathVisible = file.isSubFolderVisible;
+                }
+                file.subFolder.forEach(subItem => {
+                    if (subItem.id === id) {
+                        currentPath = `${file.name}/${subItem.name}`;
+                        ispPathVisible = true; // Always show path when clicking on a subfolder
+                    }
+                });
+            });
+    
             return {
                 files: updatedFiles,
-                currentPath: updatedFiles.find(file => file.id === id).name,
-                ispPathVisible: !prevState.ispPathVisible
+                currentPath,
+                ispPathVisible
             };
         });
     }
@@ -265,9 +283,10 @@ class Home extends Component {
                                         className="check-btn"
                                         checked={selectedItems.includes(`folder-${item.id}`)}
                                         onChange={() => this.onSelectItems(item)}
+                                        
                                     />
                                     <RiFolderOpenFill className="icon-folder" />
-                                    <p className="folder-header-name file color" onClick={() => this.toggleSubFolder(item.id)}>
+                                    <p className="folder-header-name file color" onClick={() => this.toggleSubFolder(item.id)} id="filename">
                                         {item.name}
                                     </p>
                                     <p className="folder-header-name size">-</p>
